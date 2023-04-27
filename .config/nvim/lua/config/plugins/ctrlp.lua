@@ -1,0 +1,3 @@
+return {
+	'ctrlpvim/ctrlp.vim',
+}
