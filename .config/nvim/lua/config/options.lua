@@ -8,6 +8,7 @@ wo.number = true
 
 local o = vim.o
 o.termguicolors = true
+o.undofile = true
 
 local opt = vim.opt
 

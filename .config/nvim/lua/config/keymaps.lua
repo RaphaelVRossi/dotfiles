@@ -58,6 +58,9 @@ legendary.keymaps({
 		mode = { 'n' },
 		description = 'Format file'
 	},
+	{
+		'<Leader>p', '<cmd>PrettierAsync', mode = { 'n' }, description = 'Format file'
+	},
 
   -- Diagnostic
 	{ '<leader>xx', '<cmd>TroubleToggle<cr>', mode = { 'n' }, opts = { remap = true }},
@@ -92,6 +95,8 @@ legendary.keymaps({
   -- Nice remaps
   { 'tc', ':!', mode = {'n'}, description = "Run command inside vi"},
   { '<Leader>c', ':noh<cr>', mode = {'n'}, description = "Run command inside vi"},
+  { '<Leader>Y', '"+y', mode = {'n', 'v'}, description = "Copy to clipboard"},
+  { '<Leader>P', '"+p', mode = {'n', 'v'}, description = "Paste to clipboard"},
 
   -- Split
   { 'th', ':split<CR>', mode = {'n'}, description = "Slipt horizontal"},
