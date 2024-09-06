@@ -1,0 +1,7 @@
+[user]
+	email = raphael.rossi@stone.com.br
+	name = Raphael Rossi
+[core]
+	editor = vim
+[pull]
+	rebase = true

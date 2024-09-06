@@ -84,8 +84,9 @@ legendary.keymaps({
   { '<C-a>', '<cmd>NvimTreeFocus<cr>', description = 'Focus File Tree'},
 
   -- Telescope
-  { '<C-S-N>', '<cmd>Telescope find_files<cr>', description = 'Find files'},
-  { '<C-S-F>', '<cmd>Telescope live_grep<cr>', description = 'Find files'},
+  { '<C-A-n>', '<cmd>Telescope find_files<cr>', description = 'Find files'},
+  { '<C-p>', '<cmd>Telescope find_files<cr>', description = 'Find files'},
+  { '<C-A-f>', '<cmd>Telescope live_grep<cr>', description = 'Find files'},
 
   -- Insert lines
   { 'op' , 'o<Esc>k', mode = {'n'}, description = "Add empty line below" },
@@ -95,8 +96,8 @@ legendary.keymaps({
   -- Nice remaps
   { 'tc', ':!', mode = {'n'}, description = "Run command inside vi"},
   { '<Leader>c', ':noh<cr>', mode = {'n'}, description = "Run command inside vi"},
-  { '<Leader>Y', '"+y', mode = {'n', 'v'}, description = "Copy to clipboard"},
-  { '<Leader>P', '"+p', mode = {'n', 'v'}, description = "Paste to clipboard"},
+  { '<Leader>y', '"+y', mode = {'n', 'v'}, description = "Copy to clipboard"},
+  { '<Leader>p', '"+p', mode = {'n', 'v'}, description = "Paste to clipboard"},
 
   -- Split
   { 'th', ':split<CR>', mode = {'n'}, description = "Slipt horizontal"},
@@ -107,9 +108,9 @@ legendary.keymaps({
   { '<C-l>', '<C-w>l', mode = {'n'}, description = "Go to right split"},
 
   -- Git
-  { '<C-S-B>', gs.toggle_current_line_blame, description = "Toggle Git Blame"},
-  { '<C-S-H>', gs.preview_hunk, description = "Show Hunk Preview"},
-  { '<C-S-D>', gs.diffthis, description = "Show diff"},
+  { '<C-A-B>', gs.toggle_current_line_blame, description = "Toggle Git Blame"},
+  { '<C-A-H>', gs.preview_hunk, description = "Show Hunk Preview"},
+  { '<C-A-D>', gs.diffthis, description = "Show diff"},
   { '<F13>', gs.prev_hunk, description = "Previous Hunk Preview"},
   { '<F14>', gs.next_hunk, description = "Next Hunk Preview"},
 })

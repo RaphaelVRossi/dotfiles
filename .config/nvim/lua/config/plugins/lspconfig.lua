@@ -1,4 +1,5 @@
 return {}
+
 --require("lspconfig").diagnosticls.setup {
 --  filetypes = {"python"},
 --  init_options = {

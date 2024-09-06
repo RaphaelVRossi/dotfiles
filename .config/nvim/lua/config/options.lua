@@ -14,7 +14,7 @@ local opt = vim.opt
 
 -- Global Configuration
 
-opt.mouse = nil
+opt.mouse = ""
 -- column
 opt.colorcolumn = '80'
 opt.signcolumn = 'yes'

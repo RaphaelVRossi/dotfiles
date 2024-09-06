@@ -10,13 +10,13 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
+default_gui_startup_args = {'start', '--always-new-process'}
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
 config.color_scheme = 'AdventureTime'
 
-config.font_size = 14
-config.font = wezterm.font('Fira Code')
+config.font_size = 10
 
 config.keys = {
   -- Tab Navigation
@@ -34,12 +34,12 @@ config.keys = {
   -- Split command
   {
     key = 'd',
-    mods = 'CMD',
+    mods = 'ALT',
     action = wezterm.action.SplitHorizontal,
   },
   {
     key = 'd',
-    mods = 'CMD|SHIFT',
+    mods = 'ALT|SHIFT',
     action = wezterm.action.SplitVertical,
   },
 
