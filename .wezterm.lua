@@ -16,7 +16,8 @@ default_gui_startup_args = {'start', '--always-new-process'}
 -- For example, changing the color scheme:
 config.color_scheme = 'AdventureTime'
 
-config.font_size = 10
+config.font_size = 14
+config.font = wezterm.font('Fira Code')
 
 config.keys = {
   -- Tab Navigation
