@@ -1,0 +1,16 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Raphael Rossi
+	email = me@raphaelrossi.io
+	signingkey = 7070E79ACF0F26E6
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
+[tag]
+	gpgSign = true
+[pull]
+	rebase = true
+[core]
+	editor = vim
