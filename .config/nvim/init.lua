@@ -1,5 +1,4 @@
-require('config.options')
-require('config.lazy')
-require('config.keymaps')
-require('config.colors')
-require('config.autocmds')
+require("config.lazy")
+require("config.keymap")
+require("config.options")
+

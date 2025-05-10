@@ -51,3 +51,6 @@ opt.writebackup = false
 
 
 opt.updatetime = 100
+
+vim.cmd.colorscheme('catppuccin-mocha')
+require("bufferline").setup{}
