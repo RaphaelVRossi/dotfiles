@@ -21,6 +21,9 @@ legendary.keymaps({
 	{ 'N', 'Nzz', description = 'Go to previous occurrence and center' },
   { '<S-Up>', '<PageUp>zz', description = 'Page up and center'},
   { '<S-Down>', '<PageDown>zz', description = 'Page down and center'},
+  { 'gr', '<cmd>lua vim.lsp.buf.declaration()<CR>', description = 'Go to declaration'},
+  { 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', description = 'Go to declaration'},
+  { 'gD', '<cmd>Telescope lsp_references<CR>', description = 'Go to declaration'},
 
   -- Selection
 	{ '<', '<gv', mode = { 'x' }, description = 'Shift left and keep selection' },
@@ -59,7 +62,7 @@ legendary.keymaps({
 		description = 'Format file'
 	},
 	{
-		'<Leader>p', '<cmd>PrettierAsync', mode = { 'n' }, description = 'Format file'
+		'<Leader>F', '<cmd>PrettierAsync', mode = { 'n' }, description = 'Format file'
 	},
 
   -- Diagnostic
@@ -95,7 +98,7 @@ legendary.keymaps({
 
   -- Nice remaps
   { 'tc', ':!', mode = {'n'}, description = "Run command inside vi"},
-  { '<Leader>c', ':noh<cr>', mode = {'n'}, description = "Run command inside vi"},
+  { '<Leader>c', ':noh<cr>', mode = {'n'}, description = "Clean selection"},
   { '<Leader>y', '"+y', mode = {'n', 'v'}, description = "Copy to clipboard"},
   { '<Leader>p', '"+p', mode = {'n', 'v'}, description = "Paste to clipboard"},
 
