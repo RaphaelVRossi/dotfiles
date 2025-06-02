@@ -1,3 +1,0 @@
-return {
-	'ctrlpvim/ctrlp.vim',
-}
