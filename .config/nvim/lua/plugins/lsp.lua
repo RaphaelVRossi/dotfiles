@@ -101,9 +101,8 @@ return {
         require('mason-lspconfig').setup({
             ensure_installed = {
                 "lua_ls",
-                "intelephense",
-                "ts_ls",
-                "eslint",
+                "pylsp",
+                "ruff",
             },
             handlers = {
                 -- this first function is the "default handler"
@@ -114,22 +113,23 @@ return {
 
                 -- this is the "custom handler" for `lua_ls`
                 lua_ls = function()
-                    require('lspconfig').lua_ls.setup({
-                        settings = {
-                            Lua = {
-                                runtime = {
-                                    version = 'LuaJIT',
-                                },
-                                diagnostics = {
-                                    globals = { 'vim' },
-                                },
-                                workspace = {
-                                    library = { vim.env.VIMRUNTIME },
-                                },
-                            },
-                        },
-                    })
                 end,
+            },
+        })
+        require('lspconfig').lua_ls.setup({
+            settings = {
+                Lua = {
+                    runtime = {
+                        version = 'LuaJIT',
+                    },
+                    diagnostics = {
+                        globals = { 'vim' },
+                        sadfsaf,
+                    },
+                    workspace = {
+                        library = { vim.env.VIMRUNTIME },
+                    },
+                },
             },
         })
 
@@ -150,8 +150,10 @@ return {
             sources = {
                 { name = 'path' },
                 { name = 'nvim_lsp' },
+                { name = 'lsp' },
                 { name = 'buffer',  keyword_length = 3 },
                 { name = 'luasnip', keyword_length = 2 },
+                { name = "copilot" },
             },
             snippet = {
                 expand = function(args)
