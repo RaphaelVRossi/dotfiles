@@ -57,7 +57,7 @@ wk.add({
         end,
         desc = 'Go to next error',
     },
-    { '<F3>',  ']e',                      desc = 'Go to next error',          mode = "n",    remap = true, },
+    { '<F3>',     ']e',                                                      desc = 'Go to next error',          mode = "n",    remap = true, },
     {
         "<leader>dk",
         function()
@@ -67,7 +67,18 @@ wk.add({
     },
 
     -- Copilot
-    { "<M-.>", ":Copilot suggestion<cr>", desc = "Toggle Copilot suggestion", mode = { "n" } },
+    { "<M-.>",    ":Copilot suggestion<cr>",                                 desc = "Toggle Copilot suggestion", mode = { "n" } },
+
+    -- Neotest
+    { "<F9>r",    ":lua require('neotest').run.run()<CR>",                   desc = "Run Test",                  mode = "n" },
+    { "<F9><F9>", "<F9>r",                                                   desc = "Run Test",                  mode = "n",    remap = true },
+    { "<F9>a",    ":lua require('neotest').run.run(vim.fn.getcwd())<CR>",    desc = "Run All Tests in project",  mode = "n" },
+    { "<F9>f",    ":lua require('neotest').run.run(vim.fn.expand('%'))<CR>", desc = "Run All Tests in file",     mode = "n" },
+    { "<F9>s",    ":lua require('neotest').summary.toggle()<CR>",            desc = "Toggle summary",            mode = "n" },
+    { "<F9>n",    ":Neotest jump next<CR>",                                  desc = "Jump to next test",         mode = "n" },
+    { "<F9>p",    ":Neotest jump prev<CR>",                                  desc = "Jump to previous test",     mode = "n" },
+
+
 
 
     {
